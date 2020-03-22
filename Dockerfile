@@ -16,7 +16,14 @@ RUN apt -y update && \
                      imagemagick \
                      libmagick++-dev
 
-RUN apt -y install zsh
+RUN apt-get install -y locales \
+    && locale-gen ja_JP.UTF-8
+
+ENV LANG ja_JP.UTF-8
+
+ENV LC_CTYPE ja_JP.UTF-8
+
+RUN localedef -f UTF-8 -i ja_JP ja_JP.utf8
 
 RUN curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh && \
     sh ./install.sh
@@ -38,3 +45,6 @@ RUN mkdir app
 
 WORKDIR /app/
 
+ADD ./ssh/id_rsa /root/.ssh/xxxxxxx
+
+ADD ./ssh/dmm-ec2.pem /root/.ssh/xxxxxx.pem

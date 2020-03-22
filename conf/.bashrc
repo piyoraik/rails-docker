@@ -1,4 +1,5 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
+export LANG=ja_JP.UTF-8
 
 # Note: PS1 and umask are already set in /etc/profile. You should not
 # need this unless you want different defaults for root.
@@ -19,3 +20,4 @@
 # alias rm='rm -i'
 # alias cp='cp -i'
 # alias mv='mv -i'
+export LANG=ja_JP.UTF-8
