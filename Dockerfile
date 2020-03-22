@@ -45,6 +45,6 @@ RUN mkdir app
 
 WORKDIR /app/
 
-ADD ./ssh/id_rsa /root/.ssh/xxxxxxx
+ADD ./ssh/xxxxxx /root/.ssh/xxxxxxx
 
-ADD ./ssh/dmm-ec2.pem /root/.ssh/xxxxxx.pem
+ADD ./ssh/xxxxxx /root/.ssh/xxxxxx.pem
