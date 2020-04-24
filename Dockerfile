@@ -7,14 +7,30 @@ RUN apt -y update && \
 		             libsqlite3-dev \
 		             sqlite3 \
                      vim \
-                     git \
                      ruby2.5-dev \
                      libxml2 \
                      libxml2-dev \
                      libxslt1-dev \
                      zlib1g-dev \
                      imagemagick \
-                     libmagick++-dev
+                     libmagick++-dev \
+                     make \
+                     libssl-dev \
+                     libghc-zlib-dev \
+                     libcurl4-gnutls-dev \
+                     libexpat1-dev \
+                     gettext \
+                     unzip
+
+WORKDIR /usr/local/src
+
+RUN wget https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.26.2.tar.gz
+
+RUN tar zxvf git-2.26.2.tar.gz && \
+    cd git-2.26.2 && \
+    ./configure --prefix=/usr/local && \
+    make prefix=/usr/local all && \
+    make prefix=/usr/local install
 
 RUN apt-get install -y locales \
     && locale-gen ja_JP.UTF-8
@@ -44,7 +60,3 @@ RUN  gem install bundler && \
 RUN mkdir app
 
 WORKDIR /app/
-
-ADD ./ssh/xxxxxx /root/.ssh/xxxxxxx
-
-ADD ./ssh/xxxxxx /root/.ssh/xxxxxx.pem
