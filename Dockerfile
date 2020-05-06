@@ -1,4 +1,4 @@
-FROM ruby:2.5-buster
+FROM ruby:2.5.7-buster
 
 RUN apt -y update && \
     apt -y install build-essential \
