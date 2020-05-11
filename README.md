@@ -10,11 +10,10 @@ docker-compose build
 docker-compose up -d
 ```
 NeoBundleを導入している為、.vimrcに記載するとプラグインを導入できます。  
-現在はThe NERD Treeのみ導入しておりますが今後色々追加予定です。  
-また、作業ディレクトリ内のsshフォルダに暗号鍵がなければDockerfileの最後の2行は消して頂いて構いません。  
+現在はThe NERD Treeのみ導入しておりますが今後色々追加予定です。   
 
 # Note
 
-Ruby : 2.5
-Rails: 5.2.3
+Ruby : 2.5.7  
+Rails: 5.2.3  
 
