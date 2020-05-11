@@ -9,6 +9,10 @@ mkdir app
 docker-compose build
 docker-compose up -d
 ```
+コンテナ内に接続   
+```bash
+docker exec -it rails bash  
+```
 NeoBundleを導入している為、.vimrcに記載するとプラグインを導入できます。  
 現在はThe NERD Treeのみ導入しておりますが今後色々追加予定です。   
 
